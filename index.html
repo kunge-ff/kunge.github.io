@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>快手3522624468关注一下你坤哥</title>
+    <style>
+        /* 设置按钮的样式 */
+        #audioButton {
+            position: fixed; /* 固定位置 */
+            top: 10px; /* 距离顶部10像素 */
+            right: 10px; /* 距离右侧10像素 */
+            z-index: 1000; /* 确保它在最上层 */
+            width: 50px; /* 按钮宽度 */
+            height: 50px; /* 按钮高度 */
+            background-color: #007bff; /* 背景颜色 */
+            color: #fff; /* 文字颜色 */
+            border: none; /* 无边框 */
+            border-radius: 50%; /* 圆形按钮 */
+            font-size: 24px; /* 字体大小 */
+            cursor: pointer; /* 鼠标悬停时显示手型 */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* 阴影效果 */
+            display: flex; /* 使用Flexbox布局 */
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+        }
+
+        /* 按钮悬停时的样式 */
+        #audioButton:hover {
+            background-color: #0056b3; /* 悬停时的背景颜色 */
+        }
+
+        /* 切换按钮样式 */
+        .switchButton {
+            position: fixed; /* 固定位置 */
+            top: 70px; /* 距离顶部70像素 */
+            right: 10px; /* 距离右侧10像素 */
+            z-index: 1000; /* 确保它在最上层 */
+            width: 50px; /* 按钮宽度 */
+            height: 50px; /* 按钮高度 */
+            background-color: #28a745; /* 背景颜色 */
+            color: #fff; /* 文字颜色 */
+            border: none; /* 无边框 */
+            border-radius: 50%; /* 圆形按钮 */
+            font-size: 24px; /* 字体大小 */
+            cursor: pointer; /* 鼠标悬停时显示手型 */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* 阴影效果 */
+            display: flex; /* 使用Flexbox布局 */
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+            margin-bottom: 10px; /* 按钮间距 */
+        }
+
+        /* 切换按钮悬停时的样式 */
+        .switchButton:hover {
+            background-color: #1e7e34; /* 悬停时的背景颜色 */
+        }
+
+        /* 隐藏默认的音频控件 */
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 音乐播放器 -->
+    <audio id="audio1" src="m1.mp3" loop></audio>
+    <audio id="audio2" src="m2.mp3" loop></audio>
+    <audio id="audio3" src="m3.mp3" loop></audio>
+
+    <!-- 自定义播放按钮 -->
+    <button id="audioButton" onclick="toggleAudio()">▶</button>
+
+    <!-- 切换按钮 -->
+    <button class="switchButton" id="prevButton" onclick="switchAudio('prev')">←</button>
+    <button class="switchButton" id="nextButton" onclick="switchAudio('next')">→</button>
+
+    <script>
+        // 获取所有音频元素
+        var audio1 = document.getElementById("audio1");
+        var audio2 = document.getElementById("audio2");
+        var audio3 = document.getElementById("audio3");
+        var currentAudio = audio1; // 当前播放的音频
+        var audioList = [audio1, audio2, audio3]; // 音频列表
+        var currentIndex = 0; // 当前播放的音频索引
+
+        // 获取播放按钮
+        var audioButton = document.getElementById("audioButton");
+
+        // 页面加载时自动播放第一首音乐
+        window.onload = function() {
+            currentAudio.play();
+            audioButton.textContent = "■";
+        };
+
+        // 切换音频
+        function switchAudio(direction) {
+            // 暂停所有音频
+            audio1.pause();
+            audio2.pause();
+            audio3.pause();
+
+            // 根据方向切换音频
+            if (direction === 'prev') {
+                currentIndex = (currentIndex - 1 + audioList.length) % audioList.length;
+            } else if (direction === 'next') {
+                currentIndex = (currentIndex + 1) % audioList.length;
+            }
+
+            // 选择新的音频
+            currentAudio = audioList[currentIndex];
+            currentAudio.play();
+
+            // 更新播放按钮的文本
+            audioButton.textContent = "■";
+        }
+
+        // 切换播放状态
+        function toggleAudio() {
+            if (currentAudio.paused) {
+                currentAudio.play(); // 播放音频
+                audioButton.textContent = "■"; // 更改按钮文本为暂停符号
+            } else {
+                currentAudio.pause(); // 暂停音频
+                audioButton.textContent = "▶"; // 更改按钮文本为播放符号
+            }
+        }
+    </script>
+</body>
+</html>
+<html>
+ <head> 
+  <script>
+webtools-static-lert("坤哥制作，不喜勿喷仅供学习");
+</script> 
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> 
+  <title>啦啦啦我们一起打飞机</title> 
+  <style>
+    * {
+      margin:0;
+      padding:0;
+    }
+    body {	
+      overflow:hidden;
+      touch-action: none; /* 防止触摸事件被浏览器默认行为干扰 */
+    }
+    .bg {
+      position:absolute;
+      top:-100vh;
+      left:0vw;
+      width:100vw; 
+      height:200vh;
+      background:url(background.jpg); 
+      background-size:100% 50%;
+      animation:bg 5s infinite linear;
+      z-index: 1;
+    }
+    
+    @keyframes bg {
+      100% {
+        top:0vh;  
+      }
+    }
+    
+    .me {
+      position:absolute; 
+      top:70vh; 
+      left:50vw;
+      transform:translateX(-50%); 
+      width:22vw;
+      z-index: 10;
+    }
+    
+    .bullet {
+      position:absolute;
+      width: 6vw;
+      height: 12vw;
+      background: url(she1.png) no-repeat center center;
+      background-size: contain;
+      z-index: 20;
+    }
+    
+    .enemy {
+      position:absolute;
+      width: 20vw;
+      height: 20vw;
+      background: url(she2.png) no-repeat center center;
+      background-size: contain;
+      z-index: 20;
+    }
+    
+    #score {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: white;
+      font-size: 20px;
+      z-index: 30;
+      text-shadow: 1px 1px 2px black;
+    }
+    
+    #gameOver {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0,0,0,0.8);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      display: none;
+      z-index: 30;
+    }
+    
+    #fireButton {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: rgba(255,0,0,0.5);
+      border-radius: 50%;
+      z-index: 30;
+    }
+  </style> 
+  <script src="js/jq.js"></script> 
+ </head> 
+ <body id="v1"> 
+  <div id="v2" class="bg"> 
+  </div> 
+  <img id="v3" class="me" src="me1.png" style="left: 281px; top: 70vh;"> 
+  <div id="score">
+   Score: 0
+  </div> 
+  <div id="gameOver" style="display: block;">
+    Game Over! 
+   <br id="v4"> Score: 
+   <span id="finalScore">0</span> 
+   <br id="v5"> 
+   <button id="v6" onclick="restartGame()">Restart</button> 
+  </div> 
+  <div id="fireButton"></div> 
+  <script>
+    let me = document.querySelector(".me");
+    let score = 0;
+    let gameOver = false;
+    let bullets = [];
+    let enemies = [];
+    let gameLoopId;
+    let enemySpawnInterval;
+    
+    // 初始化游戏
+    function initGame() {
+      // 重置游戏状态
+      score = 0;
+      gameOver = false;
+      document.getElementById('score').textContent = 'Score: 0';
+      document.getElementById('gameOver').style.display = 'none';
+      
+      // 清除所有子弹和敌人
+      bullets.forEach(bullet => {
+        if (bullet.element && bullet.element.parentNode) {
+          bullet.element.remove();
+        }
+      });
+      enemies.forEach(enemy => {
+        if (enemy.element && enemy.element.parentNode) {
+          enemy.element.remove();
+        }
+      });
+      bullets = [];
+      enemies = [];
+      
+      // 重置玩家位置
+      me.style.left = '50vw';
+      me.style.top = '70vh';
+      
+      // 开始游戏循环
+      gameLoopId = requestAnimationFrame(gameLoop);
+      enemySpawnInterval = setInterval(createEnemy, 1000);
+    }
+    
+    // 创建敌人
+    function createEnemy() {
+      if (gameOver) return;
+      
+      let enemy = document.createElement("div");
+      enemy.className = "enemy";
+      document.body.appendChild(enemy);
+      
+      let x = Math.random() * (window.innerWidth - 20 * window.innerWidth / 100);
+      enemy.style.left = x + "px";
+      enemy.style.top = "-20vw";
+      
+      enemies.push({
+        element: enemy,
+        x: x,
+        y: -20 * window.innerWidth / 100,
+        speed: 1 + Math.random() * 2
+      });
+    }
+    
+    // 发射子弹
+    function fireBullet() {
+      if (gameOver) return;
+      
+      let bullet = document.createElement("div");
+      bullet.className = "bullet";
+      document.body.appendChild(bullet);
+      
+      let meRect = me.getBoundingClientRect();
+      let x = meRect.left + meRect.width / 2 - 3 * window.innerWidth / 100;
+      let y = meRect.top;
+      
+      bullet.style.left = x + "px";
+      bullet.style.top = y + "px";
+      
+      bullets.push({
+        element: bullet,
+        x: x,
+        y: y,
+        speed: 5
+      });
+    }
+    
+    // 碰撞检测
+    function checkCollision(rect1, rect2) {
+      return !(rect1.right < rect2.left || 
+              rect1.left > rect2.right || 
+              rect1.bottom < rect2.top || 
+              rect1.top > rect2.bottom);
+    }
+    
+    // 游戏主循环
+    function gameLoop() {
+      if (gameOver) return;
+      
+      // 更新玩家位置
+      let meRect = me.getBoundingClientRect();
+      
+      // 更新子弹位置
+      for (let i = bullets.length - 1; i >= 0; i--) {
+        bullets[i].y -= bullets[i].speed;
+        bullets[i].element.style.top = bullets[i].y + "px";
+        
+        // 移除超出屏幕的子弹
+        if (bullets[i].y < -12 * window.innerWidth / 100) {
+          bullets[i].element.remove();
+          bullets.splice(i, 1);
+        }
+      }
+      
+      // 更新敌人位置
+      for (let i = enemies.length - 1; i >= 0; i--) {
+        enemies[i].y += enemies[i].speed;
+        enemies[i].element.style.top = enemies[i].y + "px";
+        
+        // 检查敌人是否超出屏幕底部
+        if (enemies[i].y > window.innerHeight) {
+          enemies[i].element.remove();
+          enemies.splice(i, 1);
+          continue;
+        }
+        
+        // 检查子弹和敌人的碰撞
+        let enemyRect = enemies[i].element.getBoundingClientRect();
+        for (let j = bullets.length - 1; j >= 0; j--) {
+          let bulletRect = bullets[j].element.getBoundingClientRect();
+          
+          if (checkCollision(bulletRect, enemyRect)) {
+            // 碰撞发生，移除子弹和敌人
+            bullets[j].element.remove();
+            bullets.splice(j, 1);
+            enemies[i].element.remove();
+            enemies.splice(i, 1);
+            
+            // 增加分数
+            score += 10;
+            document.getElementById('score').textContent = 'Score: ' + score;
+            break;
+          }
+        }
+        
+        // 检查玩家和敌人的碰撞
+        if (i >= 0 && enemies[i]) {
+          let enemyRect = enemies[i].element.getBoundingClientRect();
+          
+          if (checkCollision(meRect, enemyRect)) {
+            endGame();
+            return;
+          }
+        }
+      }
+      
+      gameLoopId = requestAnimationFrame(gameLoop);
+    }
+    
+    // 结束游戏
+    function endGame() {
+      gameOver = true;
+      cancelAnimationFrame(gameLoopId);
+      clearInterval(enemySpawnInterval);
+      
+      document.getElementById('finalScore').textContent = score;
+      document.getElementById('gameOver').style.display = 'block';
+    }
+    
+    // 重新开始游戏
+    function restartGame() {
+      initGame();
+    }
+    
+    // 拖动效果
+    me.addEventListener("touchmove", function(e){
+      e.preventDefault();
+      let x = e.touches[0].pageX;
+      // 限制在屏幕范围内
+      x = Math.max(0, Math.min(window.innerWidth - me.offsetWidth, x));
+      this.style.left = x + "px";
+    });
+    
+    // 射击按钮
+    document.getElementById('fireButton').addEventListener('touchstart', function(e){
+      e.preventDefault();
+      fireBullet();
+    });
+    
+    // 键盘控制
+    document.addEventListener('keydown', function(e){
+      if (gameOver) return;
+      
+      let left = parseInt(me.style.left) || window.innerWidth/2;
+      let step = 20;
+      
+      if (e.key === "ArrowLeft") {
+        left = Math.max(0, left - step);
+      } else if (e.key === "ArrowRight") {
+        left = Math.min(window.innerWidth - me.offsetWidth, left + step);
+      } else if (e.key === " ") {
+        fireBullet();
+      }
+      
+      me.style.left = left + "px";
+    });
+    
+    // 开始游戏
+    initGame();
+  </script> me(); 
+  <p id="v7">段落7</p> 
+  <p id="v8">段落8</p> 
+  <p id="v9">段落9</p> 
+  <p id="v10">段落10</p> 
+  <p id="v11">段落11</p> 
+  <p id="v12">段落12</p> 
+  <p id="v13">段落13</p> d="v13"&gt;段落13 
+  <p></p>  
+ </body>
+</html>
